@@ -1,0 +1,344 @@
+/* 动画样式定义 */
+    @keyframes rock{
+        0%{transform:rorate(0deg)}
+        10%{transfrom:rorate(3deg)}
+        20%{transform:rorate(-3deg)}
+        30%{transform:rotate(2deg)}
+        40%{transform:rotate(-2deg)}
+        50%{transform:rotate(1deg)}
+        60%{transform:rotate(-1deg)}
+        70%{transform:rotate(0deg)}
+        100%{transform:rotate(0deg)}
+    }
+    @-webkit-keyframes rock{
+        0%{transform:rorate(0deg)}
+        10%{transfrom:rorate(3deg)}
+        20%{transform:rorate(-3deg)}
+        30%{transform:rotate(2deg)}
+        40%{transform:rotate(-2deg)}
+        50%{transform:rotate(1deg)}
+        60%{transform:rotate(-1deg)}
+        70%{transform:rotate(0deg)}
+        100%{transform:rotate(0deg)}
+    }
+    *{
+        padding:0;
+        margin:0;
+    }
+    html{
+        height:100%
+    }
+    body{
+        background:#000;
+        min-height:600px;
+        min-width:1200px;
+        height:100%;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+        background:url(/images/bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        position:relative;
+        overflow: hidden;
+        }
+    .c_zongzi_box{
+        width:312px;
+        height:305px;
+        position: absolute;
+        left:1000px;
+        top:184px;
+    }
+    .c_zongzi_box_rock{
+        animation:rock 2s infinite;
+        -webkit-animation:rock 2s infinite;
+    }
+    .c_zongzi{
+        transition:all 1s;
+        opacity:1;
+        width:312px;
+        height:305px;
+        background:url(/images/zz.png) no-repeat;
+    }
+
+    .c_zongzi_out{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+
+    .c_shengzi_1{
+        width:218px;
+        height:180px;
+        background:url(/images/line_1.png) no-repeat;
+        position:absolute;
+        left:10px;
+        top:120px;
+        z-index: 999;
+        cursor:pointer;
+    }
+    .c_shengzi_2{
+        width:219px;
+        height:158px;
+        background:url(/images/line_2.png) no-repeat;
+        position:absolute;
+        left:10px;
+        top:158px;
+    }
+    .c_shengzi_3{
+        width:264px;
+        height:117px;
+        background:url(/images/line_3.png) no-repeat;
+        position:absolute;
+        left:10px;
+        top:220px;
+    }
+    .c_shengzi_4{
+        width:288px;
+        height:56px;
+        background:url(/images/line_4.png) no-repeat;
+        position:absolute;
+        left:10px;
+        top:290px;
+    }
+    .c_shengzi_0{
+        display: none;
+        }
+
+    .c_zongzirou{
+        opacity:0;
+        transition:all 1s;
+        transform:scale(.8);
+        transform-origin:top center;
+        width:288px;
+        height:206px;
+        background:url(/images/zzr_1.png);
+        background-size:288px 206px;
+        position: absolute;
+        left:50px;
+        top:34px;
+        z-index:110;
+    }
+    .c_zongzirou_in{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    .c_zuoye{
+        opacity:0;
+        transition:all 1s;
+        transform-origin:left bottom;
+        width:114px;height:266px;
+        background:url(/images/leaf_left.png);
+        position: absolute;
+        left:20px;
+        top:-50px;
+        z-index:1;
+    }
+    .c_zuoye_in{
+        opacity:1;
+        transform:rotate(-5deg);
+    }
+    .c_zuoye_out{
+        opacity:0;
+        transform:rotate(-15deg);
+    }
+    .c_youye{
+        opacity:0;
+        transition:all 1s;
+        transform:scale(.8);
+        transform-origin:left bottom;
+        width:318px;
+        height:338px;
+        background:url(/images/leaf_right.png);
+        position: absolute;
+        left:90px;
+        top:-80px;
+        z-index:111;
+    }
+    .c_youye_in{
+        opacity:1;
+        transform:rotate(5deg) scale(.8);
+    }
+    .c_youye_out{
+        opacity:0;
+        transform:rotate(15deg) scale(.8);
+    }
+    .c_diye{
+        opacity:0;
+        transition:all 1s;
+        width:618px;
+        height:468px;
+        background:url(/images/leaf_expand.png);
+        position: absolute;
+        left:-150px;
+        top:-60px;
+        z-index:99;
+    }
+    .c_diye_in{
+        opacity:1;
+    }
+
+    .c_t_1{
+        opacity:0;
+        transition:all 1s;
+        width:180px;
+        height:100px;
+        background:url(/images/t_jixiang.png);
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-70px;
+        margin-top:-50px;
+        z-index:200;
+        transform-origin:center center;
+        transform:scale(.8);
+        }
+    .c_t_2{
+        opacity:0;
+        transition:all 1s;
+        width:180px;
+        height:100px;
+        background:url(/images/t_ruyi.png);
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-70px;
+        margin-top:-50px;
+        z-index:200;
+        transform-origin:center center;
+        transform:scale(.8);}
+    .c_t_in{opacity:1;}
+
+    .text{
+        position: relative;
+        opacity:0;
+        transition:all 1s;
+        position:absolute;
+        width:400px;
+        height:370px;
+        left:350px;
+        top:180px;
+        font-size:14px;
+        line-height:20px;
+        color:#333;
+    }
+    .text_in{
+        opacity:1;
+    }
+    .text .caption{
+        position: absolute;
+        top: 280px;
+        left: 120px;
+        opacity:0;
+        transition:all 1s; 
+        width:400px;
+        height:240px;
+        background:url(/images/2.jpg) no-repeat;
+        background-size: 100% 100%;
+        /* margin-left:40px; */
+        /* margin-bottom: 30px; */
+    }
+    .text .caption_rock{
+        -webkit-animation:rock 4s infinite;
+    }
+    .text .to{
+        opacity:0;
+        transition:all 1s 0.5s;
+        width:400px;
+        margin-top:10px;
+        margin-left:40px;
+        color: crimson;
+        font-size: 30px;
+        font-family: "楷体";
+        margin-bottom: 20px;
+    }
+    .text .msg{
+        opacity:0;
+        transition:all 1s 1.0s;
+        width:450px;
+        margin-top:10px;
+        margin-left:40px;
+        font-weight: 900;
+        color: #000;
+        font-family: "楷体";
+        font-size: 25px;
+        line-height: 30px;
+        text-indent: 2em;
+    }
+    .text .from{
+        opacity:0;
+        transition:all 1s 1.5s;
+        width:400px;
+        margin-top:10px;
+        margin-right:40px;
+        text-align: right;
+        font-family:Ink Free, Arial, Helvetica, sans-serif;
+        color: lime;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .text_in .caption,
+    .text_in .to,
+    .text_in .msg,
+    .text_in .from{
+        opacity: 1;
+        margin-left:0;
+    }
+
+    /*粽子肉的视角（）旋转*/
+    .c_zongzirou_view_1{
+        transition:all 0s;
+        background:url(/images/zzr_1.png) no-repeat;
+    }
+    .c_zongzirou_view_2{
+        transition:all 0s;
+        background:url(/images/zzr_2.png) no-repeat;
+        }
+    .c_zongzirou_view_3{
+        transition:all 0s;
+        background:url(/images/zzr_3.png) no-repeat;
+    }
+    .c_zongzirou_view_4{
+        transition:all 0s;
+        background:url(/images/zzr_4.png) no-repeat;
+    }
+    .c_zongzirou_view_0{
+        transition:all 0s;
+        background:url(/images/zzr_1.png) no-repeat;
+        transform:rotateY(180deg);
+    }
+
+    /*文字的视角*/
+    .c_t_view_0{
+        transition:all 0s;
+        transform:scale(.8);
+    }
+    .c_t_mirror_0{
+        transition:all 0s;
+        display: none;
+    }
+    .c_t_view_2{
+        transition:all 0s;
+        transform:scale(.8) rotateY(30deg) translate(-50px,0) rotate(8deg);
+    }
+    .c_t_mirror_2{
+        transition:all 0s;
+        transform:scale(.7) rotateY(70deg) translate(283px,-15px) rotate(-8deg);
+    }
+    .c_t_view_3{
+        transition:all 0s;
+        transform:scale(.75) rotateY(49deg) translate(-94px,0) rotate(15deg);
+    }
+    .c_t_mirror_3{
+        transition:all 0s;
+        transform:scale(.75) rotateY(49deg) translate(118px,0) rotate(-15deg);
+    }
+    .c_t_view_4{
+        transition:all 0s;
+        transform:scale(.6) rotateY(50deg) translate(-196px,10px) rotate(24deg);
+    }
+    .c_t_mirror_4{
+        transition:all 0s;
+        transform:scale(.8) rotateY(30deg) translate(58px,10px) rotate(-5deg);}
