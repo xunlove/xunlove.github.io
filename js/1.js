@@ -133,7 +133,7 @@
         
             //s2.start();
         
-            var imgs=['img/zzr_2.png','img/zzr_3.png','img/zzr_4.png'];
+            var imgs=['/images/zzr_2.png','/images/zzr_3.png','/images/zzr_4.png'];
             var imgs_onload = function(){
                 imgs.pop();
                 if(imgs.length == 0){
